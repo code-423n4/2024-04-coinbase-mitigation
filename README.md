@@ -1,5 +1,5 @@
 
-# Coinbase Mitigation audit details
+# Coinbase Smart Wallet Mitigation Review details
 - Total Prize Pool: $12,500 in USDC
   - HM awards: $10,000 in USDC
   - Judge awards: $2,000 in USDC
