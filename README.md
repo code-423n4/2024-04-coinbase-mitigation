@@ -1,8 +1,8 @@
 
 # Coinbase Mitigation audit details
-- Total Prize Pool: $12500 in USDC
+- Total Prize Pool: $12,500 in USDC
   - HM awards: $10,000 in USDC
-  - Judge awards: $2000 in USDC
+  - Judge awards: $2,000 in USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-04-coinbase-mitigation/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
@@ -17,7 +17,10 @@ Each warden must submit a mitigation review for *every High and Medium finding* 
 
 Mitigations of all High and Medium issues will be considered in-scope and listed here.
 
-- [H-01: Title](link to Github issue)
+- [H-01: Users making specific chain account ownership upgrades will likely cause issues when later using cross-chain replay-able ownership upgrades](https://github.com/code-423n4/2024-03-coinbase-findings/issues/114)
+
+- [M-01: Balance check during MagicSpend validation cannot ensure that MagicSpend has enough balance to cover the requested fund.](https://github.com/code-423n4/2024-03-coinbase-findings/issues/110)
+- [M-02: Users can front run the signature of the paymaster operation leading to some problems.](https://github.com/code-423n4/2024-03-coinbase-findings/issues/39)
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
 
