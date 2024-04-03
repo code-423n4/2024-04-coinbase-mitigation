@@ -11,7 +11,7 @@
 
 ## Important note 
 
-Each warden must submit a mitigation review for *every High and Medium finding* from the parent audit that is listed as in-scope for the mitigation review. **Incomplete mitigation reviews will not be eligible for awards.**
+Each warden must submit a mitigation review for *every finding* from the parent audit that is listed as in-scope for the mitigation review as well noted additional items. **Incomplete mitigation reviews will not be eligible for awards.**
 
 ## Findings being mitigated
 
@@ -24,7 +24,7 @@ Mitigations of all issues listed here will be considered in-scope.
 
 - [QA-01: All Smart Wallet funds will be lost if users remove all owners](https://github.com/code-423n4/2024-03-coinbase-findings/issues/181)
 
-
+Additional Items
 [ ⭐️ SPONSORS ADD INFO HERE ]
 
 ## Overview of changes
