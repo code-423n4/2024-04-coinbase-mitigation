@@ -11,7 +11,7 @@
 
 ## Important note 
 
-Each warden must submit a mitigation review for *every finding* from the parent audit that is listed as in-scope for the mitigation review as well noted additional items. **Incomplete mitigation reviews will not be eligible for awards.**
+Each warden must submit a mitigation review for *every finding* from the parent audit that is listed as in-scope for the mitigation review as well as noted additional items. **Incomplete mitigation reviews will not be eligible for awards.**
 
 ## Findings being mitigated
 
