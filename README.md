@@ -30,7 +30,8 @@ Mitigations of all issues listed here will be considered in-scope.
 
 ###
 Gas & QA Fixes
-- ...
+- https://github.com/coinbase/magic-spend/pull/18#pullrequestreview-1981188702
+- https://github.com/coinbase/smart-wallet/pull/45
 
 ## Out of Scope
 
