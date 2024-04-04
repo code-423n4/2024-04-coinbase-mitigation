@@ -20,7 +20,6 @@ Mitigations of all issues listed here will be considered in-scope.
 - [H-01: Users making specific chain account ownership upgrades will likely cause issues when later using cross-chain replay-able ownership upgrades](https://github.com/code-423n4/2024-03-coinbase-findings/issues/114)
 
 - [M-01: Balance check during MagicSpend validation cannot ensure that MagicSpend has enough balance to cover the requested fund.](https://github.com/code-423n4/2024-03-coinbase-findings/issues/110)
-- [M-02: Users can front run the signature of the paymaster operation leading to some problems.](https://github.com/code-423n4/2024-03-coinbase-findings/issues/39)
 
 - [QA-01: All Smart Wallet funds will be lost if users remove all owners](https://github.com/code-423n4/2024-03-coinbase-findings/issues/181)
 
