@@ -23,29 +23,17 @@ Mitigations of all issues listed here will be considered in-scope.
 
 - [QA-01: All Smart Wallet funds will be lost if users remove all owners](https://github.com/code-423n4/2024-03-coinbase-findings/issues/181)
 
-Additional Items
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
-## Overview of changes
-
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern.
-
 ## Mitigations to be reviewed
+- [H-01 Fix](https://github.com/coinbase/smart-wallet/pull/42): The issue is remediated by updating the parameterization of `removeOwnerAtIndex` to also take an `owner` argument. We then check that the `owner` passed matches the owner found at the index. In this way, we prevent a replayable transaction removing a different owner at the same index. 
+- [M-01 Fix](https://github.com/coinbase/magic-spend/pull/17): This issue is complex to address. The warden suggested adding a variable to track in flight withdraws, and we [pursued this](https://github.com/coinbase/magic-spend/pull/16). However, we realized that bundlers penalize paymasters when the UserOp behaves differently when simulated in isolation vs. in the bundle, and this would not fix this. Instead, we give the owner a tool to address this probabilistically: the owner can set a `maxWithdrawDenominator` and we enforce that native asset withdraws must be `<= address(this).balance / maxWithdrawDenominator`. For example, if `maxWithdrawDenominator` is set to 20, it would take 20 native asset withdraws (each withdrawing max allowed) + 1 native asset withdraw in the same transaction to cause a revert. It is of course known that this doesn't entirely solve the issue, and the efficacy depends the value chosen and usage. 
+- [QA-01 Fix](https://github.com/coinbase/smart-wallet/pull/43): We decided to take action here, changing `removeOwnerAtIndex` to revert if the owner is the last owner and adding `removeLastOwner`.
 
-### Branch
-[ ⭐️ SPONSORS ADD A LINK TO THE BRANCH IN YOUR REPO CONTAINING ALL PRS ]
-
-### Individual PRs
-[ ⭐️ SPONSORS ADD ALL RELEVANT PRs TO THE TABLE BELOW:]
-
-Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
-
-| URL | Mitigation of | Purpose | 
-| ----------- | ------------- | ----------- |
-| https://github.com/your-repo/sample-contracts/pull/XXX | H-01 | This mitigation does XYZ | 
+###
+Gas & QA Fixes
+- ...
 
 ## Out of Scope
 
-Please list any High and Medium issues that were judged as valid but you have chosen not to fix.
+We are not taking action https://github.com/code-423n4/2024-03-coinbase-findings/issues/39. 
 
 
